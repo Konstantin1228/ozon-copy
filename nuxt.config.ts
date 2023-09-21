@@ -11,11 +11,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@ant-design-vue/nuxt'
+    '@ant-design-vue/nuxt',
+    '@nuxt/image',
   ],
   css: [
     "~/assets/css/global.css",
   ],
+  image: {},
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: '~/tailwind.config.ts'

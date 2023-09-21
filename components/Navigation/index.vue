@@ -26,7 +26,7 @@ import CurrencyVue from './Currency/Currency.vue';
                 <NuxtLink to="/IN-PROCESS" target="_blank">Подарочные сертификаты</NuxtLink>
             </li>
             <li class="ml-4 hover:text-blue-500 transition">
-                <a-popover :overlay-inner-style="{ padding: 0 }">
+                <a-popover  >
                     <template #content>
                         <div class="flex flex-col py-3">
                             <NuxtLink to="/IN-PROCESS" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Статус заказа</NuxtLink>

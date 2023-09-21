@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="flex mr-12 w-full bg-white border-2 border-blue-500 rounded-lg">
-        <button :style="{ backgroundColor: 'rgba(0,48,120,.039)' }" class="flex items-center bg-gray text-blue-700 m-1 rounded-lg">
+        <button :style="{ backgroundColor: 'rgba(0,48,120,.039)' }" class="flex items-center bg-gray-300 text-blue-700 m-1 rounded-lg">
             <span class="ml-2 mr-0.5 text-sm">Везде</span>
             <svg class="fill-blue-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                 <path d="m4 6 4 5 4-5H4Z"></path>
