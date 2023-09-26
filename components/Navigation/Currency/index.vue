@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import CloseIcon from '@/assets/images/close.svg'
-import ArrowBlue from './ui/ArrowBlue.vue';
 import InputArrow from './ui/InputArrow.vue';
 
 
-const selectOptions = ref<{ readebleName: string, value: string }[]>([
+const selectOptions = reactive<{ readebleName: string, value: string }[]>([
     { readebleName: 'Российский рубль', value: 'RUB', },
     { readebleName: 'Доллар США', value: 'USD', },
     { readebleName: 'Белорусский рубль', value: 'BYN', },
@@ -13,25 +11,29 @@ const selectOptions = ref<{ readebleName: string, value: string }[]>([
     { readebleName: 'Армянский драм', value: 'AMD', },
 ]);
 
-const filteredOptions=ref(selectOptions.value)
+const filteredOptions=ref(selectOptions)
 
-const currency = ref(selectOptions.value[0])
+const currency = ref(selectOptions[0])
 const isModalOpen = ref(false)
 const isSelectOpen = ref(false)
 const inputValue=ref('')
 
 
 const handleModal = () => isModalOpen.value = !isModalOpen.value
-const handleSelect = () => isSelectOpen.value = !isSelectOpen.value
+const handleSelect = () => isSelectOpen.value =true
 
 const changeCurrency=(currenсyIdx:number)=>{
-    currency.value=selectOptions.value[currenсyIdx]
+    currency.value=selectOptions[currenсyIdx]
     isSelectOpen.value=false
     isModalOpen.value=false
 }
 
 const inputHandler=()=>{
-    filteredOptions.value=selectOptions.value.filter(option=>(option.readebleName.includes(inputValue.value))||(option.value.includes(inputValue.value)))
+    filteredOptions.value=selectOptions.filter(option=>{
+        const optionRead=option.readebleName.toLowerCase().includes(inputValue.value)
+        const optionVal=option.value.toLowerCase().includes(inputValue.value)
+        return optionVal||optionRead
+    })
 }
 
 const clickOusideHandler=()=>{
@@ -44,12 +46,12 @@ const clickOusideHandler=()=>{
     <button class="mr-3 px-1.5 bg-blue-300 text-blue-700 rounded" @click="handleModal">{{ currency.value }}</button>
     <a-modal  v-model:open="isModalOpen" :footer="null" centered class="currenсy-modal">
         <template #closeIcon>
-            <NuxtImg class="w-full" src="/images/close.svg" alt="Закрыть"/>
+            <NuxtImg format="webp"   class="w-full" src="images/svg/close.svg" alt="Закрыть"/>
         </template>
         <h1 class="font-bold text-3xl mb-9">Валюта</h1>
-        <div class="relative" v-clickOutside="clickOusideHandler" > 
+        <div class="relative w-[80%]" v-clickOutside="clickOusideHandler" > 
             <div 
-                class="flex items-center justify-between px-3 py-2 border-2 rounded-lg w-[80%] transition hover:border-blue-500" 
+                class="flex items-center justify-between px-3 py-2 border-2 rounded-lg  transition hover:border-blue-500" 
                 :class="{
                     'border-blue-500':isSelectOpen,
                     'border-gray-500':!isSelectOpen
@@ -64,7 +66,9 @@ const clickOusideHandler=()=>{
                 <InputArrow :active="isSelectOpen"/>
             </div>
             <transition name="fade">
-                <div v-if="isSelectOpen" class="absolute transition mt-3 left-0 max-h-64 overflow-y-auto rounded-xl w-[80%] font-medium" :style="{ boxShadow: '0 4px 16px 1px rgba(0,26,52,.16)' }">
+                <div v-if="isSelectOpen &&filteredOptions.length>=1"
+                    class="absolute transition mt-3 left-0 max-h-64 overflow-y-auto rounded-xl w-full font-medium" 
+                    :style="{ boxShadow: '0 4px 16px 1px rgba(0,26,52,.16)' }">
                     <div class="bg-blue-300 px-4 py-2">
                         <span class="text-blue-700 uppercase text-xs">Рекомендуемые</span>
                     </div>
@@ -78,7 +82,8 @@ const clickOusideHandler=()=>{
                             <span class="text-sm text-blue-700 uppercase">{{ value }}</span>
                         </div>
                         <div v-if="value === currency.value">
-                           <ArrowBlue/>
+                            <!-- !!! -->
+                            <NuxtImg format="webp"   class="h-6" src="images/svg/arrow-blue.svg" alt="arrow"/>
                         </div>
                     </button>
                </div>

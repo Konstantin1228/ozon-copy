@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -13,13 +13,18 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@ant-design-vue/nuxt',
     '@nuxt/image',
+    'nuxt-swiper'
   ],
+  swiper: {
+    modules: ['navigation', 'pagination'], // all modules are imported by default
+  },
   css: [
     "~/assets/css/global.css",
   ],
-  image: {},
+  image: {
+  },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: '~/tailwind.config.ts'
-  }
+  },
 })

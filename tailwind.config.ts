@@ -11,6 +11,7 @@ module.exports = {
         colors: {
             black: '#000',
             white: '#fff',
+            'white-64': 'rgba(255, 255, 255, 0.64)',
             blue: {
                 100: '#e5efff',
                 300: 'rgba(0,150,255,.078)',
@@ -19,8 +20,13 @@ module.exports = {
             },
             gray: {
                 300: 'rgba(0,48,120,.039)',
-                500: '#b3bcc5'
-            }
+                400: 'rgba(0, 0, 0, 0.48)',
+                500: '#b3bcc5',
+                700: '#99a3ae'
+            },
+            purple: 'rgb(91, 81, 222)',
+            green: '#10c44c',
+            red: '#f91155'
         },
     },
     plugins: [],

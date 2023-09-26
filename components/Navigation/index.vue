@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CurrencyVue from './Currency/Currency.vue';
+import CurrencyVue from './Currency/index.vue';
 
 </script>
 <template>
@@ -13,22 +13,22 @@ import CurrencyVue from './Currency/Currency.vue';
             </button>
         </div>
         <ul class="flex text-blue-700">
-            <li class="ml-4 px-1 bg-blue-300 text-blue-700 rounded-xl">
+            <li class="ml-4 font-medium px-2 bg-blue-300 text-blue-700 rounded-xl hover:text-blue-500 transition">
                 <NuxtLink to="/IN-PROCESS" target="_blank">Стать продавцом</NuxtLink>
             </li>
-            <li class="ml-4 hover:text-blue-500 transition">
+            <li class="ml-4 font-medium hover:text-blue-500 transition">
                 <NuxtLink to="/IN-PROCESS" target="_blank">Покупать как компания</NuxtLink>
             </li>
-            <li class="ml-4 hover:text-blue-500 transition">
+            <li class="ml-4 font-medium hover:text-blue-500 transition">
                 <NuxtLink to="/IN-PROCESS" target="_blank">Мобильное приложение</NuxtLink>
             </li>
-            <li class="ml-4 hover:text-blue-500 transition">
+            <li class="ml-4 font-medium hover:text-blue-500 transition">
                 <NuxtLink to="/IN-PROCESS" target="_blank">Подарочные сертификаты</NuxtLink>
             </li>
-            <li class="ml-4 hover:text-blue-500 transition">
-                <a-popover  >
+            <li class="ml-4 font-medium hover:text-blue-500 transition">
+                <a-popover>
                     <template #content>
-                        <div class="flex flex-col py-3">
+                        <div class="flex flex-col py-1">
                             <NuxtLink to="/IN-PROCESS" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Статус заказа</NuxtLink>
                             <NuxtLink to="/IN-PROCESS" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Стоимость доставки</NuxtLink>
                             <NuxtLink to="/IN-PROCESS" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Постаматы</NuxtLink>
