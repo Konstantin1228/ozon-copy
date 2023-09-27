@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Header from '@/components/Header/index.vue';
-import Navigation from '@/components/Navigation/index.vue';
+import Header from '@/components/blocks/Header/index.vue';
+import Navigation from '@/components/blocks/Navigation/index.vue';
 
 </script>
 

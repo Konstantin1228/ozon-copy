@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@ant-design-vue/nuxt',
-    '@nuxt/image',
+    '@nuxt/image', 
     'nuxt-swiper'
   ],
   swiper: {
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/global.css",
   ],
-  image: {
+  image: { 
   },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',

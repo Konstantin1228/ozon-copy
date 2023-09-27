@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Ad from './Ad/index.vue';
+import Ad from '../../shared/Ad/index.vue';
 import Section from './Section/index.vue';
 import { Navigation, Pagination } from 'swiper/modules'
 
