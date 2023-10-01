@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import Title from './ui/Title.vue';
-import Text from './ui/Text.vue';
-import TitleSwitch from './ui/TitleSwitch.vue';
-
+import Title from '@/components/pages/Category/Filters/ui/Title.vue'
 
 const radioOptions: { value: number, text: string, imgSrc?: string, alt?: string }[] = [
     { value: 0, text: 'Неважно' },
@@ -19,13 +16,9 @@ const installment = ref(false)
 const original = ref(false)
 const weeklyAction = ref(false)
 
-watch([installment], () => {
-})
-
-
 </script>
 <template>
-    <section class="flex flex-col">
+    <div class="flex flex-col">
         <TitleSwitch text="Распродажа" v-model:checked="sale" />
         <div>
             <div class="mb-3">
@@ -48,9 +41,8 @@ watch([installment], () => {
                 </a-radio>
             </a-radio-group>
         </div>
-        <!-- <TitleSwitch text="Рассрочка 0%" :checked="installment" @update:checked="val => installment = val" /> -->
-        <TitleSwitch text="Рассрочка 0%" v-model:checked="installment" />
+        <TitleSwitch text="Рассрочка 0%" popoverText="Товары в Рассрочку 0% на 6 месяцев " v-model:checked="installment" />
         <TitleSwitch text="Оригинальный товар" v-model:checked="original" />
-        <TitleSwitch text="Еженедельная акция" :popover="{ text: 'Выгодные предложения для регулярных покупок', position: 'afterSwitch' }" v-model:checked="weeklyAction" />
-    </section>
+        <TitleSwitch text="Еженедельная акция" popoverText="Выгодные предложения для регулярных покупок" v-model:checked="weeklyAction" />
+    </div>
 </template>

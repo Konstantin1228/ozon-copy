@@ -29,14 +29,14 @@ import CurrencyVue from './Currency/index.vue';
                 <a-popover>
                     <template #content>
                         <div class="flex flex-col py-1">
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Статус заказа</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Стоимость доставки</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Постаматы</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Примерка одежды и обуви</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Оплата</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Ozon Карта</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Ozon Premium</NuxtLink>
-                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-300 hover:text-black w-full">Ozon Рассрочка</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Статус заказа</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Стоимость доставки</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Постаматы</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Примерка одежды и обуви</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Оплата</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Ozon Карта</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Ozon Premium</NuxtLink>
+                            <NuxtLink to="*" class="py-4 px-3 hover:bg-blue-100 hover:text-black w-full">Ozon Рассрочка</NuxtLink>
                         </div>
                     </template>
                     <NuxtLink to="*" target="_blank">Помощь</NuxtLink>

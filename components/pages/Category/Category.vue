@@ -4,5 +4,8 @@ const { categoryName } = defineProps<{ categoryName: string }>()
 
 </script>
 <template>
-    <Filters />
+    <div class="flex">
+        <Filters />
+        <div class="w-full"></div>
+    </div>
 </template>

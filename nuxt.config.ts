@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -8,11 +7,14 @@ export default defineNuxtConfig({
       ]
     }
   },
+  components: [
+    { path: '~/components', extensions: ['.vue'], pathPrefix: false }
+  ],
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
     '@ant-design-vue/nuxt',
-    '@nuxt/image', 
+    '@nuxt/image',
     'nuxt-swiper'
   ],
   swiper: {
@@ -21,7 +23,7 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/global.css",
   ],
-  image: { 
+  image: {
   },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',

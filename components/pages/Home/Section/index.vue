@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { SectionProps } from './model/types';
 import Card from '@/components/shared/Card/index.vue';
+import { SectionProps } from './model/types';
 
 const props = defineProps<SectionProps>()
 
